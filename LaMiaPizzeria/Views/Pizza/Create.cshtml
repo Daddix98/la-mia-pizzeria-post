@@ -1,0 +1,29 @@
+﻿@using LaMiaPizzeria.Models
+@model PizzaViewModel
+
+
+@using (Html.BeginForm("Create", "Pizza", FormMethod.Post))
+{
+    @Html.LabelFor(x=>Model.Nome)
+    @Html.TextBoxFor(x=>Model.Nome)
+    //@Html.ValidationMessageFor
+    <br />
+    <br />
+
+    @Html.LabelFor(x=>Model.Descrizione)
+    @Html.TextBoxFor(x=>Model.Descrizione)
+    <br />
+    <br />
+
+    @Html.LabelFor(x=>Model.Prezzo)
+    @Html.TextBoxFor(x=>Model.Prezzo)
+    <br />
+    <br />
+
+    @Html.LabelFor(x=>Model.UrlImmagine)
+    @Html.TextBoxFor(x=>Model.UrlImmagine)
+    <br />
+    <br />
+
+    <input type="submit" value="Aggiungi" />
+}
